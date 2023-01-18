@@ -11,6 +11,8 @@ public class Ball_Controller : MonoBehaviour
 
     public int speed;
     
+    public Canvas WinGame;
+    
 
     void Start()
     {
@@ -32,6 +34,12 @@ public class Ball_Controller : MonoBehaviour
         {
             SceneManager.LoadScene("Level02");
         }
+
+       if (other.gameObject.CompareTag("Finish"))
+       {
+           WinGame.gameObject.SetActive(true);
+       }
+           
     }
 
     
