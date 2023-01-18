@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerCheckPoint : MonoBehaviour
 {
     public Transform chracter;
-    
+    public Rigidbody rb;
     private Vector3 spawnPoint;
+  
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
@@ -29,8 +30,13 @@ public class PlayerCheckPoint : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Enemy"))
         {
-            //Destroy(gameObject);
             spawn();
+            rb.velocity=Vector3.zero;
+            rb.angularVelocity=Vector3.zero;
+            rb.Sleep();
+            
+            
+            
 
         }
         

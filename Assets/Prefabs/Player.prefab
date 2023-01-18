@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7478315003900941698}
   - component: {fileID: 7478315003900941701}
   - component: {fileID: 7478315003900941700}
-  - component: {fileID: 7478315003900941702}
+  - component: {fileID: 4780877074073829359}
   - component: {fileID: 7478315003900941699}
   - component: {fileID: 7478315003900941817}
   - component: {fileID: 7478315003900941696}
@@ -88,7 +88,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7478315003900941702
+--- !u!114 &4780877074073829359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,15 +97,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7478315003900941816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40caa63ef4f2cfc4b84dc0eafd688d2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e235c00bcbbff94e92426c26ddafa0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 7478315003900941817}
-  speed: 12
-  counter: 0
-  objectNumber: 0
-  score: {fileID: 0}
-  endgame: {fileID: 0}
+  speed: 10
+  rotationSpeed: 10
 --- !u!135 &7478315003900941699
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -148,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chracter: {fileID: 7478315003900941698}
+  rb: {fileID: 0}
 --- !u!1 &7478315004638351845
 GameObject:
   m_ObjectHideFlags: 0

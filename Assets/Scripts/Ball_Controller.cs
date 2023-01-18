@@ -3,20 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ball_Controller : MonoBehaviour
 {
     public Rigidbody rb;
 
     public int speed;
-
-    public int counter;
-
-    public int objectNumber;
-
-    public Text score;
-
-    public Text endgame;
+    
 
     void Start()
     {
@@ -34,9 +28,11 @@ public class Ball_Controller : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.SetActive(false);
-        counter++;
-        
-        
+       if (other.gameObject.CompareTag("level2"))
+        {
+            SceneManager.LoadScene("Level02");
+        }
     }
+
+    
 }
